@@ -24,6 +24,8 @@ Track:
 Example Link if you want to track traffic source:
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
 
+Automaticaly filters out bots 
+
 Node Packages Used:
 * [ua-parser](https://github.com/tobie/ua-parser)
 * [node-geoip](https://github.com/bluesmoon/node-geoip)
