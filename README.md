@@ -10,7 +10,7 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 * Currently, it is only setup to log the visitors first visit and then store the visit ID in LocalStorage .. This could be made configurable going forward.
 * Great for if you're doing split testing or segmenting features to certain cohorts based on location, browser, device, or traffice source
 
-Track:
+### Trackable Datapoints ### (create an issue if you have ideas for more)
   * IP Address
   * Referer
   * User Agent Raw
@@ -28,16 +28,16 @@ Track:
     * CMP : Marketing Campaign
     * S1 - S5 (Custom Variables) : Could be used to identify a certain ad or other info to relale a visit back to something
     
-Example Link if you want to track traffic source:
+** Example Link ** (if you want to track traffic sources)
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
 
 
-Node Packages Used:
+### Node Packages Used
 * [ua-parser](https://github.com/tobie/ua-parser)
 * [node-geoip](https://github.com/bluesmoon/node-geoip)
 
 
-Example Visit Record:
+### Example Visit Record
 ```
 { 
 createdAt: Sat Apr 05 2014 03:42:12 GMT-0700 (PDT),
