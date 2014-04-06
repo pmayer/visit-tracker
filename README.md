@@ -7,7 +7,7 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 * Currently, it's using storing visits in a collection called visits. It could be modified to use with ElasticSearch or other DB's. To access the collection inside of your app use `Tracker.visits.find()`
 * Automatically filters out bots.
 * When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting.
-* Currently, it is only setup to log the visitors first visit and then store the visit ID in LocalStorage.. It logs return visits date times in the same visit record .. This could be made configurable going forward.
+* Currently, it is setup to log the visitors initial visit and then store return visits datetimes in the same record in the returnVisits array .. This could be made configurable going forward.
 * Great for use with internal split testing or if you want to segment features to certain cohorts based on location, browser, device, or traffice source
 * Can be configured to attribute visits without an SID to a certain source such as Organic
 
