@@ -8,7 +8,7 @@ Usage Notes:
 * Automatically filters out bots.
 * When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting.
 * Currently, it is only setup to log the visitors first visit and then store the visit ID in LocalStorage .. This could be made configurable going forward.
-* Great for if you're doing split testing or segmenting features to certain cohorts based on location or browser
+* Great for if you're doing split testing or segmenting features to certain cohorts based on location, browser, device, or traffice source
 
 Track:
   * IP Address
