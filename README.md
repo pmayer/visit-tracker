@@ -1,7 +1,7 @@
-meteor-visit-tracker
+Visit Tracker
 ===================
 
-Meteor Visit Tracker - Log visits for internal analytics and conversion attribution
+Log visits for internal analytics and conversion attribution
 
 ![demo](http://cl.ly/image/2e24321B2O2U/Screenshot%202014-04-06%2015.41.31.png)
 
