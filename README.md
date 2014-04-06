@@ -4,7 +4,7 @@ meteor-visit-tracker
 Meteor Visit Tracker - Log visits for internal analytics and conversion attribution
 
 ### Usage Notes
-* Currently, it creates Visits collection. It could be modified to use with ElasticSearch or other DB's.
+* Currently, it's using storing visits in a collection called Visits. It could be modified to use with ElasticSearch or other DB's.
 * Automatically filters out bots.
 * When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting.
 * Currently, it is only setup to log the visitors first visit and then store the visit ID in LocalStorage .. This could be made configurable going forward.
