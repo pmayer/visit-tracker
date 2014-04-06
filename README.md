@@ -11,7 +11,7 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 * Great for if you're doing split testing or segmenting features to certain cohorts based on location, browser, device, or traffice source
 
 ### Trackable Datapoints 
-*(create an issue if you have ideas for more)*
+*Create an issue if you have ideas for more*
 * IP Address
 * Referer
 * User Agent Raw
@@ -32,7 +32,7 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 ___
 
 ### Example Tracking Link
-*Can be configured to attribute visits without an SID to a certain source such as Organic 
+*Can be configured to attribute visits without an SID to a certain source such as Organic*
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
 
 
