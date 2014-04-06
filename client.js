@@ -19,15 +19,15 @@ Meteor.startup(function() {
   qs = querystring();
 
   // If the url has an SID add the tracking variables
-  if (qs != null ? qs.sid : void 0) {
+  if (qs.sid) {
     tracking = {
       sid: qs.sid,
-      cmp: (qs != null ? qs.cmp : void 0) ? qs.cmp : null,
-      s1: (qs != null ? qs.s1 : void 0) ? qs.s1 : null,
-      s2: (qs != null ? qs.s2 : void 0) ? qs.s2 : null,
-      s3: (qs != null ? qs.s3 : void 0) ? qs.s3 : null,
-      s4: (qs != null ? qs.s4 : void 0) ? qs.s4 : null,
-      s5: (qs != null ? qs.s5 : void 0) ? qs.s5 : null
+      cmp: qs.cmp  ? qs.cmp : null,
+      s1: qs.s1 ? qs.s1 : null,
+      s2: qs.s2 ? qs.s2 : null,
+      s3: qs.s3 ? qs.s3 : null,
+      s4: qs.s4 ? qs.s4 : null,
+      s5: qs.s5 ? qs.s5 : null
     };
   } else {
     tracking = {
