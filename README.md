@@ -9,6 +9,8 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 * When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting.
 * Currently, it is only setup to log the visitors first visit and then store the visit ID in LocalStorage .. This could be made configurable going forward.
 * Great for if you're doing split testing or segmenting features to certain cohorts based on location, browser, device, or traffice source
+* Can be configured to attribute visits without an SID to a certain source such as Organic
+___
 
 ### Trackable Datapoints 
 *Create an issue if you have ideas for more*
@@ -32,7 +34,6 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 ___
 
 ### Example Tracking Link
-*Can be configured to attribute visits without an SID to a certain source such as Organic*
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
 
 
