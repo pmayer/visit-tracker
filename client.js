@@ -13,28 +13,40 @@ querystring = function() {
 };
 
 Meteor.startup(function() {
-  var qs, tracking;
 
-  // Parse query string
-  qs = querystring();
+  if (!amplify.store('initialVisit')) {
 
-  // If the url has an SID add the tracking variables
-  if (qs.sid) {
-    tracking = {
-      sid: qs.sid,
-      cmp: qs.cmp  ? qs.cmp : null,
-      s1: qs.s1 ? qs.s1 : null,
-      s2: qs.s2 ? qs.s2 : null,
-      s3: qs.s3 ? qs.s3 : null,
-      s4: qs.s4 ? qs.s4 : null,
-      s5: qs.s5 ? qs.s5 : null
-    };
+    var qs, tracking;
+
+    // Parse query string
+    qs = querystring();
+
+    // If the url has an SID add the tracking variables
+    if (qs.sid) {
+      tracking = {
+        sid: qs.sid,
+        cmp: qs.cmp  ? qs.cmp : null,
+        s1: qs.s1 ? qs.s1 : null,
+        s2: qs.s2 ? qs.s2 : null,
+        s3: qs.s3 ? qs.s3 : null,
+        s4: qs.s4 ? qs.s4 : null,
+        s5: qs.s5 ? qs.s5 : null
+      };
+    } else {
+      tracking = {
+        sid: Tracker.defaultSource
+      };
+    }
+    Meteor.call('logVisit', tracking, function(err, res) {
+      console.log(res);
+      amplify.store('initialVisit', res);
+    });
+
   } else {
-    tracking = {
-      sid: Tracker.defaultSource
-    };
+
+    Meteor.call('logReturnVisit', amplify.store('initialVisit')._id, function(err, res) {
+      console.log(res);
+    });
+
   }
-  return Meteor.call('trackVisit', tracking, function(err, res) {
-    return console.log(res);
-  });
 });

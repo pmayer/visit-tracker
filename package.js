@@ -8,6 +8,7 @@ Npm.depends({
 });
 
 Package.on_use(function (api, where) {
+  api.use(['amplify'], 'client');
   api.export('Tracker');
   api.add_files('visit-tracker.js', ['server', 'client']);
   api.add_files('server.js', ['server']);

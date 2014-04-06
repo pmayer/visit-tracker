@@ -3,8 +3,13 @@ geoip = Npm.require('geoip-lite');
 
 Meteor.methods({
 
-  trackVisit: function(tracking) {
-    var h, r, visit, ip, geo;
+  /**
+   * Log the initial visit
+   * @param  {Obect} tracking - An object containing tracking variables
+   * @return {Object}  The initial visit record
+   */
+  logVisit: function (tracking) {
+    var h, r, visit, ip, geo, id;
 
     // Get the headers from the method request
     h = headers.get(this);
@@ -33,9 +38,21 @@ Meteor.methods({
     };
 
     // Insert the visit record
-    Tracker.visits.insert(visit);
+    id = Tracker.visits.insert(visit);
+
+    visit._id = id;
 
     return visit
+  },
+
+  /**
+   * Logs Return Visits into the visit record
+   * @param  {String} id - The initial visit record id
+   * @return {Object}  The updated visit record
+   */
+  logReturnVisit: function (id) {
+    Tracker.visits.update(id, {$push: {returnVisits: new Date()} });
+    return Tracker.visits.findOne(id);
   }
 
 });
