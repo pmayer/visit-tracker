@@ -31,7 +31,7 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
   
 ___
 
-**Example Link** (if you want to track traffic sources)
+### Example Tracking Link
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
 
 
