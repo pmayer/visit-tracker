@@ -32,6 +32,7 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 ___
 
 ### Example Tracking Link
+*Can be configured to attribute visits without an SID to a certain source such as Organic 
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
 
 
@@ -76,6 +77,7 @@ geo: {
 }
 
 ```
+___
 
 ### Node Packages Used
 * [ua-parser](https://github.com/tobie/ua-parser)
