@@ -27,8 +27,8 @@ ___
   * Region (State)
   * Geo Coords
   * Country
-* Traffic Source
-  * SID (Source ID) : Could be a unique ID that points to TrafficSources collection record for Google Display
+* Traffic Source (for marketing)
+  * SID (Source ID) : A unique ID that identifies the traffic source (can be the id of a record in a TrafficSource collection or for example we use slugs: GOOGD = Google Display
   * CMP : Marketing Campaign
   * S1 - S5 (Custom Variables) : Could be used to identify a certain ad or other info to relale a visit back to something
   
