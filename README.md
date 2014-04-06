@@ -10,6 +10,7 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
 * Currently, it is only setup to log the visitors first visit and then store the visit ID in LocalStorage .. This could be made configurable going forward.
 * Great for if you're doing split testing or segmenting features to certain cohorts based on location, browser, device, or traffice source
 * Can be configured to attribute visits without an SID to a certain source such as Organic
+
 ___
 
 ### Trackable Datapoints 
