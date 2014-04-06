@@ -32,7 +32,7 @@ ___
 * Traffic Source (for marketing)
   * SID (Source ID) : A unique ID that identifies the traffic source (can be the id of a record in a TrafficSource collection or for example we use slugs: GOOGD = Google Display
   * CMP : Marketing Campaign
-  * S1 - S5 (Custom Variables) : Could be used to identify a certain ad or other info to relale a visit back to something
+  * S1 - S5 (Custom Variables) : Could be used to identify a certain ad or other info to relate a visit back to its source
 * Return Visits - An array of datetimes of return visits
 
 ___
