@@ -1,7 +1,7 @@
 meteor-visit-tracker
 ===================
 
-Meteor Visit Tracker
+Meteor Visit Tracker - Log web app visits for homebrew analytics and conversion attribution
 
 Track:
   * IP Address
@@ -24,3 +24,6 @@ Track:
 Example Link if you want to track traffic source:
 `http://yoursite.com/?sid=Lim3FKnpWLHbFxXGB&subid=newyorkny&s1=ad4342`
 
+Node Packages Used:
+* (ua-parser)[https://github.com/tobie/ua-parser]
+* (node-geoip)[https://github.com/bluesmoon/node-geoip]
