@@ -17,8 +17,8 @@ ___
 *Create an issue if you have ideas for more*
 * IP Address
 * Referer
-* User Agent Raw
-* User Agent Parsed
+* User Agent
+  * Raw
   * Browser
   * OS
   * Device
