@@ -29,13 +29,10 @@ Meteor Visit Tracker - Log visits for internal analytics and conversion attribut
   * CMP : Marketing Campaign
   * S1 - S5 (Custom Variables) : Could be used to identify a certain ad or other info to relale a visit back to something
   
-** Example Link ** (if you want to track traffic sources)
+___
+
+**Example Link** (if you want to track traffic sources)
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
-
-
-### Node Packages Used
-* [ua-parser](https://github.com/tobie/ua-parser)
-* [node-geoip](https://github.com/bluesmoon/node-geoip)
 
 
 ### Example Visit Record
@@ -79,3 +76,7 @@ geo: {
 }
 
 ```
+
+### Node Packages Used
+* [ua-parser](https://github.com/tobie/ua-parser)
+* [node-geoip](https://github.com/bluesmoon/node-geoip)
