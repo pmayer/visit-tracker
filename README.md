@@ -1,7 +1,7 @@
 meteor-visit-tracker
 ===================
 
-Meteor Visit Tracker - Log web app visits for internal analytics and conversion attribution
+Meteor Visit Tracker - Log visits for internal analytics and conversion attribution
 
 Usage Notes: 
 * Currently, it creates Visits collection. It could be modified to use with ElasticSearch or other DB's.
