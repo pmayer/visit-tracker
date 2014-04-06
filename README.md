@@ -6,7 +6,7 @@ Log visits for internal analytics and conversion attribution
 ![demo](http://cl.ly/image/2e24321B2O2U/Screenshot%202014-04-06%2015.41.31.png)
 
 ### Usage Notes
-* Currently, it's using storing visits in a collection called visits. It could be modified to use with ElasticSearch or other DB's. To access the collection inside of your app use `Tracker.visits.find()`
+* Currently, it's storing visits in a collection called visits. It could be modified to use with ElasticSearch or other DB's. To access the collection inside of your app use `Tracker.visits.find()`
 * Automatically filters out bots.
 * When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting.
 * Currently, it is setup to log the visitors initial visit and then store return visits datetimes in the same record in the returnVisits array .. This could be made configurable going forward.
