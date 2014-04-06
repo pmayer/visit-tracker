@@ -3,6 +3,12 @@ meteor-visit-tracker
 
 Meteor Visit Tracker - Log web app visits for homebrew analytics and conversion attribution
 
+Usage Notes: 
+* Currently Visit Tracker creates Visits Collection could be modified to use with ElasticSearch or other DB's
+* Automatically filters out bots 
+* When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting 
+* Currently only setup to log the visitors first visit and then store the visit ID in LocalStorage .. could make the configurable going forward
+
 Track:
   * IP Address
   * Referer
@@ -24,7 +30,6 @@ Track:
 Example Link if you want to track traffic source:
 `http://yoursite.com/?sid=googd&cmp=2341234&s1=ad4342&s2=dopetracker`
 
-Automaticaly filters out bots 
 
 Node Packages Used:
 * [ua-parser](https://github.com/tobie/ua-parser)
