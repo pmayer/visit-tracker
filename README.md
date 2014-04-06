@@ -25,5 +25,5 @@ Example Link if you want to track traffic source:
 `http://yoursite.com/?sid=Lim3FKnpWLHbFxXGB&subid=newyorkny&s1=ad4342`
 
 Node Packages Used:
-* (ua-parser)[https://github.com/tobie/ua-parser]
-* (node-geoip)[https://github.com/bluesmoon/node-geoip]
+* [ua-parser](https://github.com/tobie/ua-parser)
+* [node-geoip](https://github.com/bluesmoon/node-geoip)
