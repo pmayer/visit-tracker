@@ -39,7 +39,7 @@ Node Packages Used:
 Example Visit Record:
 ```
 { 
-referer: undefined,
+referer: 'https://www.google.com/search?q=visit+tracker&oq=visit+tracker&aqs=chrome..69i57j69i61l3j0l2.3647j0j8&sourceid=chrome&espv=210&es_sm=119&ie=UTF-8',
 ipAddress: '76.167.148.250',
 userAgent: { 
  raw: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36',
