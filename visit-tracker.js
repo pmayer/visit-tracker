@@ -1,8 +1,10 @@
 // Tracker API - this will eventually be configurable
 Tracker = {
-  collectionName: 'visits',
-  visits: new Meteor.Collection('visits'),
-  defaultSource: 'ORG'
+  options: {
+    collectionName: 'visits',
+    defaultSource: 'ORG'
+  },
+  visits: new Meteor.Collection('visits')
 }
 
 // Insert the created datetime into the doc

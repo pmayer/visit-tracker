@@ -34,7 +34,7 @@ Meteor.startup(function() {
       };
     } else {
       tracking = {
-        sid: Tracker.defaultSource
+        sid: Tracker.options.defaultSource
       };
     }
     Meteor.call('logVisit', tracking, function(err, res) {

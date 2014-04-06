@@ -17,32 +17,39 @@ Meteor.methods({
     // Parse the user agent from the headers
     r = parser.parse(h['user-agent']);
 
-    // Get the IP address from the headers
-    ip = headers.methodClientIP(this);
+    // Autodetect spiders and only log visits for real users
+    if (r.device != 'spider') {
 
-    // Geo IP look up for the IP Address
-    geo = geoip.lookup(ip);
+      // Get the IP address from the headers
+      ip = headers.methodClientIP(this);
 
-    // Build the visit record object
-    visit = {
-      referer: h.referer,
-      ipAddress: ip,
-      userAgent:  {
-        raw: r.string,
-        browser: r.userAgent,
-        device: r.device,
-        os: r.os
-      },
-      tracking: tracking,
-      geo: geo
-    };
+      // Geo IP look up for the IP Address
+      geo = geoip.lookup(ip);
 
-    // Insert the visit record
-    id = Tracker.visits.insert(visit);
+      // Build the visit record object
+      visit = {
+        referer: h.referer,
+        ipAddress: ip,
+        userAgent:  {
+          raw: r.string,
+          browser: r.userAgent,
+          device: r.device,
+          os: r.os
+        },
+        tracking: tracking,
+        geo: geo
+      };
 
-    visit._id = id;
+      // Insert the visit record
+      id = Tracker.visits.insert(visit);
 
-    return visit
+      visit._id = id;
+
+      return visit
+
+    } else {
+      return 'Spider Detected'
+    }
   },
 
   /**
