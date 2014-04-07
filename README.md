@@ -11,6 +11,8 @@ mrt add visit-tracker
 ```
 *This takes awhile to download the geoip-lite database*
 
+___
+
 ### Usage Notes
 * Currently, it's storing visits in a collection called visits. It could be modified to use with ElasticSearch or other DB's. To access the collection inside of your app use `Tracker.visits.find()`
 * Automatic Spider / Bot Filtering.
