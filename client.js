@@ -14,7 +14,7 @@ querystring = function() {
 
 Meteor.startup(function() {
 
-  if (!amplify.store('initialVisit')) {
+  if (!amplify.store('visit')) {
 
     var qs, tracking;
 
@@ -39,7 +39,7 @@ Meteor.startup(function() {
     }
     Meteor.call('logVisit', tracking, function(err, res) {
       console.log(res);
-      amplify.store('initialVisit', res);
+      amplify.store('visit', res);
     });
 
   } else {
