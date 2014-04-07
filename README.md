@@ -17,9 +17,14 @@ ___
 * Currently, it's storing visits in a collection called visits. It could be modified to use with ElasticSearch or other DB's. To access the collection inside of your app use `Tracker.visits.find()`.
 * Automatic Spider / Bot Filtering.
 * When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting. To access the current visit on the client use `amplify.store('visit')`.
-* Currently, it is setup with the first click attribution philisophy in mind where it logs the visitors initial visit and then store return visits datetimes in the same record in the returnVisits array .. This could be made configurable going forward if someone needs last click attribution or an expiration date on first click.
+* Currently, it is setup with the first click attribution philisophy in mind where it logs the visitors initial visit and then stores the datetimes of return visits in the initial visit's returnVisits array .. This could be made configurable going forward if someone needs last click attribution, an expiration date on first click, or wants to record all visits.
 * Great for use with internal split testing or if you want to segment features to certain cohorts based on location, browser, device, or traffice source
 * Can be configured to attribute visits without an SID to a certain source such as Organic
+
+___
+
+### Todo
+* If the current visitor is logged in also record the user id or update the visit when they login / signup
 
 ___
 
