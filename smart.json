@@ -1,9 +1,9 @@
 {
   "name": "visit-tracker",
-  "description": "Log visits for internal analytics and conversion attribution",
+  "description": "Log visits for internal analytics and conversion attribution (GeoIP, UserAgent, Traffic Source)",
   "homepage": "https://github.com/andrewreedy/meteor-visit-tracker",
   "author": "Andrew Reedy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "git": "https://github.com/andrewreedy/meteor-visit-tracker.git",
   "packages": {
     "headers": {},
