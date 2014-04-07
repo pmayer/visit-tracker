@@ -36,7 +36,7 @@ Meteor.methods({
           device: r.device,
           os: r.os
         },
-        tracking: tracking,
+        trafficSource: tracking,
         geo: geo
       };
 
