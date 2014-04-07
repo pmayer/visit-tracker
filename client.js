@@ -38,14 +38,14 @@ Meteor.startup(function() {
       };
     }
     Meteor.call('logVisit', tracking, function(err, res) {
-      console.log(res);
+      //console.log(res);
       amplify.store('visit', res);
     });
 
   } else {
 
     Meteor.call('logReturnVisit', amplify.store('initialVisit')._id, function(err, res) {
-      console.log(res);
+      //console.log(res);
     });
 
   }
