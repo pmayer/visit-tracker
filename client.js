@@ -44,7 +44,7 @@ Meteor.startup(function() {
 
   } else {
 
-    Meteor.call('logReturnVisit', amplify.store('initialVisit')._id, function(err, res) {
+    Meteor.call('logReturnVisit', amplify.store('visit')._id, function(err, res) {
       //console.log(res);
     });
 
