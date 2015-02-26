@@ -16,8 +16,8 @@ Package.on_use(function (api, where) {
 
   api.use([
     'mongo',
-    'matb33:collection-hooks',
-    'gadicohen:headers'
+    'matb33:collection-hooks@0.7.9',
+    'gadicohen:headers@0.0.27'
   ]);
 
   api.export('VisitTracker');
