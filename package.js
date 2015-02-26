@@ -1,5 +1,8 @@
 Package.describe({
-  summary: "Log visits for internal analytics and conversion attribution (GeoIP, UserAgent, Traffic Source)"
+  name: 'bigdata:visit-tracker',
+  summary: "Log visits for internal analytics and conversion attribution (GeoIP, UserAgent, Traffic Source)",
+  version: '1.0.0',
+  git: 'https://github.com/meteorbigdata/visit-tracker.git'
 });
 
 Npm.depends({
@@ -8,11 +11,16 @@ Npm.depends({
 });
 
 Package.on_use(function (api, where) {
-  api.use(['amplify'], 'client');
-  api.use(['headers'], 'server');
-  api.use(['collection-hooks'], ["client", "server"]);
 
-  api.export('Tracker');
+  api.versionsFrom('METEOR@1.0');
+
+  api.use([
+    'mongo',
+    'matb33:collection-hooks',
+    'gadicohen:headers'
+  ]);
+
+  api.export('VisitTracker');
 
   api.add_files('visit-tracker.js', ['server', 'client']);
   api.add_files('server.js', ['server']);

@@ -14,7 +14,7 @@ querystring = function() {
 
 Meteor.startup(function() {
 
-  if (!amplify.store('visit')) {
+  if (!Session.get('currentVisit')) {
 
     var qs, tracking;
 
@@ -34,17 +34,17 @@ Meteor.startup(function() {
       };
     } else {
       tracking = {
-        sid: Tracker.options.defaultSource
+        sid: VisitTracker.options.defaultSource
       };
     }
     Meteor.call('logVisit', tracking, function(err, res) {
       //console.log(res);
-      amplify.store('visit', res);
+      Session.set('currentVisit', res);
     });
 
   } else {
 
-    Meteor.call('logReturnVisit', amplify.store('visit')._id, function(err, res) {
+    Meteor.call('logReturnVisit', Session.get('currentVisit')._id, function(err, res) {
       //console.log(res);
     });
 

@@ -7,16 +7,16 @@ Log visits for internal analytics and conversion attribution
 
 ### Installation
 ```bash
-mrt add visit-tracker
+meteor add bigdata:visit-tracker
 ```
 *This takes awhile to download the geoip-lite database*
 
 ___
 
 ### Usage Notes
-* Currently, it's storing visits in a collection called visits. It could be modified to use with ElasticSearch or other DB's. To access the collection inside of your app use `Tracker.visits.find()`.
+* Currently, it's storing visits in a collection called visits. It could be modified to use with ElasticSearch or other DB's. To access the collection inside of your app use `VisitTracker.visits.find()`.
 * Automatic Spider / Bot Filtering.
-* When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting. To access the current visit on the client use `amplify.store('visit')`.
+* When logging events such as an order, sign up, or whatever you consider a conversion also store the visit ID for later data mining / segmenting. To access the current visit on the client use `Session.get('currentVisit')`.
 * Currently, it is setup with the first click attribution philisophy in mind where it logs the visitors initial visit and then stores the datetimes of return visits in the initial visit's returnVisits array .. This could be made configurable going forward if someone needs last click attribution, an expiration date on first click, or wants to record all visits.
 * Great for use with internal split testing or if you want to segment features to certain cohorts based on location, browser, device, or traffice source
 * Can be configured to attribute visits without an SID to a certain source such as Organic

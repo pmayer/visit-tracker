@@ -1,13 +1,13 @@
-// Tracker API - this will eventually be configurable
-Tracker = {
+// Visit Tracker API - this will eventually be configurable
+VisitTracker = {
   options: {
     collectionName: 'visits',
     defaultSource: 'ORG'
   },
-  visits: new Meteor.Collection('visits')
+  visits: new Mongo.Collection('visits')
 }
 
 // Insert the created datetime into the doc
-Tracker.visits.before.insert(function(userId, doc) {
+VisitTracker.visits.before.insert(function(userId, doc) {
   return doc.createdAt = new Date();
 });

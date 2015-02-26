@@ -41,7 +41,7 @@ Meteor.methods({
       };
 
       // Insert the visit record
-      id = Tracker.visits.insert(visit);
+      id = VisitTracker.visits.insert(visit);
 
       visit._id = id;
 
@@ -58,8 +58,8 @@ Meteor.methods({
    * @return {Object}  The updated visit record
    */
   logReturnVisit: function (id) {
-    Tracker.visits.update(id, {$push: {returnVisits: new Date()} });
-    return Tracker.visits.findOne(id);
+    VisitTracker.visits.update(id, {$push: {returnVisits: new Date()} });
+    return VisitTracker.visits.findOne(id);
   }
 
 });
