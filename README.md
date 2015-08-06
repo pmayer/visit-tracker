@@ -1,7 +1,7 @@
 Visit Tracker
 ===================
 
-Log visits for internal analytics and conversion attribution
+Log visits for internal analytics and conversion attribution. Visualization is completely up to you. For a hosted solution that includes visualization, see [tail:core](https://atmospherejs.com/tail/core).
 
 ![demo](http://cl.ly/image/2e24321B2O2U/Screenshot%202014-04-06%2015.41.31.png)
 
