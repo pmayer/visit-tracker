@@ -47,6 +47,7 @@ ___
   * CMP : Marketing Campaign
   * S1 - S5 (Custom Variables) : Could be used to identify a certain ad or other info to relate a visit back to its source
 * Return Visits - An array of datetimes of return visits
+* Accept Language
 
 ___
 
@@ -84,14 +85,15 @@ trafficSource: {
  cmp: '2341234'
  s1: 'ad4342'
  s2: 'dopetracker'
-}
+},
 geo: {
  range: [ 1286050560, 1286051327 ],
  country: 'US',
  region: 'CA',
  city: 'La Jolla',
  ll: [ 32.8667, -117.2481 ]
-}
+},
+acceptLanguage: 'en-US,en;q=0.8',
 returnVisits: [
   Sat Apr 05 2014 04:22:05 GMT-0700 (PDT),
   Sat Apr 05 2014 05:45:00 GMT-0700 (PDT)
