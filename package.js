@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'bigdata:visit-tracker',
+  name: 'pmayer:visit-tracker',
   summary: "Log visits for internal analytics and conversion attribution (GeoIP, UserAgent, Traffic Source)",
   version: '1.0.0',
-  git: 'https://github.com/meteorbigdata/visit-tracker.git'
+  git: 'https://github.com/pmayer/visit-tracker.git'
 });
 
 Npm.depends({
