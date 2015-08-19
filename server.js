@@ -37,7 +37,8 @@ Meteor.methods({
           os: r.os
         },
         trafficSource: tracking,
-        geo: geo
+        geo: geo,
+        acceptLanguage: h['accept-language']
       };
 
       // Insert the visit record
