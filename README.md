@@ -1,15 +1,7 @@
 Visit Tracker
 ===================
 
-Log visits for internal analytics and conversion attribution. Visualization is completely up to you. For a hosted solution that includes visualization, see [tail:core](https://atmospherejs.com/tail/core).
-
-![demo](http://cl.ly/image/2e24321B2O2U/Screenshot%202014-04-06%2015.41.31.png)
-
-### Installation
-```bash
-meteor add bigdata:visit-tracker
-```
-*This takes awhile to download the geoip-lite database*
+Log visits for internal analytics and conversion attribution. Visualization is completely up to you.
 
 ___
 
@@ -20,11 +12,6 @@ ___
 * Currently, it is setup with the first click attribution philisophy in mind where it logs the visitors initial visit and then stores the datetimes of return visits in the initial visit's returnVisits array .. This could be made configurable going forward if someone needs last click attribution, an expiration date on first click, or wants to record all visits.
 * Great for use with internal split testing or if you want to segment features to certain cohorts based on location, browser, device, or traffice source
 * Can be configured to attribute visits without an SID to a certain source such as Organic
-
-___
-
-### Todo
-* If the current visitor is logged in also record the user id or update the visit when they login / signup
 
 ___
 
